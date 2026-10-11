@@ -1,0 +1,23 @@
+name: Testing and building my app
+on: push
+jobs:
+    Test:
+        runs-on: ubuntu-slim
+        steps:
+            - name: Getting my code first
+              uses: actions/checkout@v6
+
+            - name: Installing node
+              uses: actions/setup-node@v6
+              with:
+                node-version: '24.21.0'
+            
+            - name: Installing dependencies
+              run: npm install
+
+            - name: Testing application
+              run: npm test
+              
+
+
+
