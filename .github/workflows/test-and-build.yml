@@ -19,6 +19,7 @@ jobs:
               run: npm test
     
     Build:
+        needs: Test
         runs-on: ubuntu-slim
         steps:
             - name: Getting my code first
